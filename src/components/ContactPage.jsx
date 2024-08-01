@@ -1,23 +1,25 @@
+import { InputText } from 'primereact/inputtext';
+import { Button } from 'primereact/button';
+
 const ContactPage = () => (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold">Contact Us</h1>
-      <form>
-        <div>
-          <label>Name:</label>
-          <input type="text" className="border p-2" />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input type="email" className="border p-2" />
-        </div>
-        <div>
-          <label>Message:</label>
-          <textarea className="border p-2"></textarea>
-        </div>
-        <button type="submit" className="bg-blue-500 text-white p-2 mt-2">Submit</button>
-      </form>
-    </div>
-  );
-  
-  export default ContactPage;
-  
+  <div className="p-4">
+    <h1 className="text-2xl font-bold">Contact Us</h1>
+    <form>
+      <div className="p-float-label mt-4">
+        <InputText id="name" />
+        <label htmlFor="name">Name</label>
+      </div>
+      <div className="p-float-label mt-4">
+        <InputText id="email" />
+        <label htmlFor="email">Email</label>
+      </div>
+      <div className="p-float-label mt-4">
+        <InputText id="message" />
+        <label htmlFor="message">Message</label>
+      </div>
+      <Button label="Submit" icon="pi pi-send" className="p-button-primary mt-4" />
+    </form>
+  </div>
+);
+
+export default ContactPage;
